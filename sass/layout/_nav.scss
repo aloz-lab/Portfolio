@@ -1,0 +1,149 @@
+.topbar {
+    background: $color-bgd-light;
+    border-bottom: 1px solid $color-grey;
+    .topbar_logo {
+        display: block;
+        text-align: center;
+        h1 {
+            font-family: 'Dr Sugiyama', cursive;
+            font-size: 48px;
+            line-height: 54px;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-family: 'Poiret One', cursive;
+            font-size: 1.5rem;
+            line-height: 0.8rem;
+        }
+    }
+}
+
+/******* DARK MODE ********/
+.dark .topbar {
+    background-color: $color-dark-grey;
+    h1, h2, .topbar_burger, .topbar_cross, a {
+        color: $color-font-light;
+    }
+}
+
+/******* MOBILE *******/
+
+@media only screen and (max-width: 630px) {
+    .topbar {
+        height: 64px;
+        .topbar-nav {
+            display: none;
+        }
+        .topbar_logo {
+            display: block;
+            text-align: center;
+            h1 {
+                font-size: 40px;
+                line-height: 46px;
+            }
+            h2 {
+                font-size: 1.3rem;
+                line-height: 0.8rem;
+            }
+        }
+        .topbar_burger {
+            display: block;
+            background: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 45px;
+            padding: 10px 20px 0px 15px;
+            color: gb(20, 20, 20);
+            border: 0;
+            font-size: 1.4em;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+        .topbar_cross {
+            display: none;
+            background: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px 20px 0px 15px;
+            color: $color-font-dark;
+            border: 0;
+            font-size: 1.4em;
+            line-height: 45px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+    
+    .topbar.responsive {
+        .topbar-nav {
+            font-family: 'Julius Sans One', sans-serif;
+            font-weight: bold; 
+            font-size: 0.8em; 
+            width: 100%; 
+            background-color: $color-bgd-light;
+            position: absolute;
+            top: 64px; 
+            text-align: center; 
+            z-index: 10;
+            a {
+                display: block;
+                text-transform: uppercase;
+                padding: 15px 0 15px 0;
+                border-bottom: #dddddd 1px solid;
+            }
+            a:hover {
+                background: $color-grey;
+                color: $color-font-light;
+            }
+        }
+    }
+
+}
+
+
+/******* TABLET AND DESKTOP *******/
+
+@media only screen and (min-width: 630px) {
+    
+    .topbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        padding: 0 25px;
+        .topbar-nav {
+            text-align: center;
+            a {
+                display: inline-block;
+                text-transform: uppercase;
+                font-family: 'Julius Sans One', sans-serif;
+                margin: 0 10px;
+                padding: 10px;
+                transition: all .3s;
+            }
+        }
+        .topbar-nav a:hover,
+        .topbar-nav a.topbar-nav_active {
+            background-color: $color-grey;
+            color:$color-font-light;
+        }
+        .topbar_burger,
+        .topbar_cross {
+            display: none;
+        }
+    }
+
+    /* DARK MODE */
+    .dark .topbar {
+        .topbar-nav a:hover,
+        .topbar-nav a.topbar-nav_active {
+            background-color: $color-light-grey;
+            color:$color-font-dark;
+        }
+    }
+    
+}

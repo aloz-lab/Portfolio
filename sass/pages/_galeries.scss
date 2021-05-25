@@ -1,0 +1,58 @@
+/*@import "../utils/variables";
+
+@import "../base/base";
+@import "../base/typography";
+
+@import "../layout/nav";
+@import "../layout/footer";*/
+
+.galeries {
+    display: grid;
+    //width: 80%;
+    max-width: 800px;
+    height: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+    grid-template-columns: 1fr 1fr;
+    align-content: stretch;
+    row-gap: 10px;
+    column-gap: 10px;
+    .galeries-image {
+        cursor: pointer;
+        @media screen and (max-width: 630px) {
+            height: 150px;
+        }
+        .text-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            color: $color-font-light;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .4s ease;
+            background: linear-gradient(354deg, rgb(19, 18, 18) 0%, transparent 72%);
+            overflow: hidden;
+        }
+        .text {
+            position: absolute;
+            bottom: 10px;
+            margin: 10px;
+        }
+        h3 {
+            font-family: 'Julius Sans One', sans-serif;
+        }
+        p {
+            max-width: 100%;
+            margin-top: 16px;
+            font-family: 'Raleway', sans-serif;
+        }
+        &:hover .text-container {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    @media screen and (max-width: 630px) {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+}

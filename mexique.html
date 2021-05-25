@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Anne</title>
+    <script src="https://kit.fontawesome.com/9b819a4323.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="./fresco/dist/css/fresco.css"/>
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER -->
+    <header class="topbar" id="topbar">
+        <div class="topbar_logo">
+            <h1>Alozi</h1>
+            <h2>Photo</h2>
+        </div>
+        <button class="topbar_burger" id="topbar_burger">
+            <i class="fa fa-bars"></i>
+        </button>
+        <button class="topbar_cross" id="topbar_cross">
+            <i class="fas fa-times"></i>
+        </button>  
+        <nav class="topbar-nav">
+            <a href="index.html">Accueil</a>
+            <a href="galeries.html" class="topbar-nav_active">Galeries</a>
+            <a href="apropos.html">A propos</a>
+        </nav>
+    </header>
+    
+    <!-- GALERIE -->
+    <main>
+        <h1 class="title">Mexique</h1>
+
+        <div class="gallery-mexique">
+            <div class="gallery_item gallery_item--1">
+                <a href="./images/1.jpg" class="fresco"
+                data-fresco-caption="Caption below the image"
+                data-fresco-group="mexique"
+                data-fresco-group-options="ui: 'outside'"
+                data-fresco-options="thumbnail: './images/thumbnail1.jpg'">
+                    <img src="./images/thumbnail1.jpg" class="gallery_img" alt="">
+                </a>
+            </div>
+            <div class="gallery_item gallery_item--2">
+                <a href="https://via.placeholder.com/700x1000/FF0000" class="fresco" 
+                data-fresco-caption="Caption below the image"
+                data-fresco-group="mexique">
+                    <img src="https://via.placeholder.com/100x150/FF0000" class="gallery_img" alt="">
+                </a>
+            </div>
+            <div class="gallery_item gallery_item--3">
+                <a href="./images/3.jpg" class="fresco"
+                data-fresco-caption="Caption below the image"
+                data-fresco-group="mexique">
+                    <img src="https://via.placeholder.com/150x100/FFFF00" class="gallery_img" alt="">
+                </a>
+            </div>
+            <div class="gallery_item gallery_item--4">
+                <a href="./images/4.jpg" class="fresco"
+                data-fresco-caption="Caption below the image"
+                data-fresco-group="mexique">
+                    <img src="https://via.placeholder.com/150x100/008000" class="gallery_img" alt="">
+                </a>
+            </div>
+            <div class="gallery_item gallery_item--5">
+                <img src="https://via.placeholder.com/150x100/0000FF" class="gallery_img" alt="">
+            </div>
+            <div class="gallery_item gallery_item--6">
+                <img src="https://via.placeholder.com/150x100/FFFF55" class="gallery_img" alt="">
+            </div>
+            <div class="gallery_item gallery_item--7">
+                <img src="https://via.placeholder.com/150x100/FF5555" class="gallery_img" alt="">
+            </div>
+            <div class="gallery_item gallery_item--8">
+                <img src="https://via.placeholder.com/150x100/00FFFF" class="gallery_img" alt="">
+            </div>
+            <div class="gallery_item gallery_item--9">
+                <img src="https://via.placeholder.com/150x100/55FFFF" class="gallery_img" alt="">
+            </div>
+            <div class="gallery_item gallery_item--10">
+                <img src="https://via.placeholder.com/150x100/5555FF" class="gallery_img" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="toggle">
+            <input type="checkbox" class="checkbox" id="dark-mode" />
+            <label for="dark-mode" class="label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+            </label>
+      </div>
+      <div class="social-media">
+            <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+            <a href=""><i class="far fa-envelope fa-2x"></i></a>
+      </div>
+    </footer>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.3.js" integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc=" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./fresco/dist/js/fresco.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

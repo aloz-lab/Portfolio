@@ -1,0 +1,63 @@
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 64px;
+    background-color: $color-grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid $color-grey;
+    .social-media {
+        text-align: center;
+        i {
+            color: $color-dark-blue;
+            transform: scale(0.8);
+            transition: all .3s;
+            &:hover {
+                color: $color-light-blue;
+                transform: scale(1);
+            }
+        }
+    }
+    a {
+        display: inline-block; 
+        margin: 0 10px;
+    }
+    .checkbox {
+        display: none;
+    }
+    .label {
+        height: 27px;
+        width: 60px;
+        background-color: $color-dark-blue;
+        padding: 5px 8px;
+        border-radius: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position:relative;
+        //box-shadow: 2px 1px 1px #333;
+        .ball {
+            background-color: $color-light-blue;
+            border-radius: 50%;
+            height: 21px;
+            width: 21px;
+            position: absolute;
+            top: 3px;
+            left: 5px;
+            transform: translateX(0px);
+            transition: transform .4s ease;
+        }
+    }
+    .checkbox:checked + .label .ball {
+        transform: translateX(29px);
+    }
+}
+
+
+/* DARK MODE */
+.dark footer {
+    background-color: $color-dark-grey;
+}
