@@ -10,15 +10,16 @@
     display: grid;
     //width: 80%;
     max-width: 800px;
-    height: 1000px;
+    //height: 1000px;
     margin: 20px auto;
     padding: 0 10px;
     grid-template-columns: 1fr 1fr;
     align-content: stretch;
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: 20px;
+    column-gap: 20px;
     .galeries-image {
         cursor: pointer;
+        height: 250px;
         @media screen and (max-width: 630px) {
             height: 150px;
         }
