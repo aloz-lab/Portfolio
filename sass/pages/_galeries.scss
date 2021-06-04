@@ -1,16 +1,6 @@
-/*@import "../utils/variables";
-
-@import "../base/base";
-@import "../base/typography";
-
-@import "../layout/nav";
-@import "../layout/footer";*/
-
 .galeries {
     display: grid;
-    //width: 80%;
     max-width: 800px;
-    //height: 1000px;
     margin: 20px auto;
     padding: 0 10px;
     grid-template-columns: 1fr 1fr;
@@ -33,6 +23,10 @@
             transition: all .4s ease;
             background: linear-gradient(354deg, rgb(19, 18, 18) 0%, transparent 72%);
             overflow: hidden;
+            @media screen and (max-width: 630px) {
+                visibility: visible;
+                opacity: 1;
+            }
         }
         .text {
             position: absolute;

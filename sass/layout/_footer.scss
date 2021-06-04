@@ -8,8 +8,17 @@ footer {
     justify-content: space-around;
     align-items: center;
     border-top: 1px solid $color-grey;
+    .copyright {
+        font-family: 'Dr Sugiyama', cursive;
+        color: $color-dark-blue;
+        font-size: 28px;
+    }
     .social-media {
         text-align: center;
+        a {
+            display: inline-block; 
+            margin: 0 10px;
+        }
         i {
             color: $color-dark-blue;
             transform: scale(0.8);
@@ -19,11 +28,7 @@ footer {
                 transform: scale(1);
             }
         }
-    }
-    a {
-        display: inline-block; 
-        margin: 0 10px;
-    }
+    }   
     .checkbox {
         display: none;
     }
@@ -38,7 +43,6 @@ footer {
         align-items: center;
         justify-content: space-between;
         position:relative;
-        //box-shadow: 2px 1px 1px #333;
         .ball {
             background-color: $color-light-blue;
             border-radius: 50%;
