@@ -21,15 +21,53 @@ a {
 /* DARK MODE */
 .dark {
   background-color: #000;
+  /* DARK MODE */
+}
+.dark .portfolio-title {
+  color: #fff;
+}
+
+.toggle .checkbox {
+  display: none;
+}
+.toggle .label {
+  height: 27px;
+  width: 60px;
+  background-color: #0096a1;
+  padding: 5px 8px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.toggle .label .ball {
+  background-color: #0ebac7;
+  border-radius: 50%;
+  height: 21px;
+  width: 21px;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  transform: translateX(0px);
+  transition: transform 0.4s ease;
+}
+.toggle .checkbox:checked + .label .ball {
+  transform: translateX(29px);
 }
 
 .topbar {
-  background: #fff;
+  background: #434f56;
   border-bottom: 1px solid #434f56;
+}
+.topbar a {
+  color: #fff;
 }
 .topbar .topbar_logo {
   display: block;
   text-align: center;
+  color: #fff;
 }
 .topbar .topbar_logo h1 {
   font-family: "Dr Sugiyama", cursive;
@@ -59,6 +97,9 @@ a {
   .topbar .topbar-nav {
     display: none;
   }
+  .topbar .toggle {
+    display: none;
+  }
   .topbar .topbar_logo {
     display: block;
     text-align: center;
@@ -79,7 +120,7 @@ a {
     right: 0;
     line-height: 45px;
     padding: 10px 20px 0px 15px;
-    color: gb(20, 20, 20);
+    color: #0096a1;
     border: 0;
     font-size: 1.4em;
     font-weight: bold;
@@ -93,7 +134,7 @@ a {
     top: 0;
     right: 0;
     padding: 10px 20px 0px 15px;
-    color: #000;
+    color: #0096a1;
     border: 0;
     font-size: 1.4em;
     line-height: 45px;
@@ -115,12 +156,13 @@ a {
   }
   .topbar.responsive .topbar-nav a {
     display: block;
+    color: #000;
     text-transform: uppercase;
     padding: 15px 0 15px 0;
     border-bottom: #dddddd 1px solid;
   }
   .topbar.responsive .topbar-nav a:hover {
-    background: #434f56;
+    background: #0096a1;
     color: #fff;
   }
 }
@@ -128,10 +170,12 @@ a {
 @media only screen and (min-width: 630px) {
   .topbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 0 25px;
+    position: fixed;
+    width: 100%;
+    top: 0;
   }
   .topbar .topbar-nav {
     text-align: center;
@@ -146,12 +190,19 @@ a {
   }
   .topbar .topbar-nav a:hover,
 .topbar .topbar-nav a.topbar-nav_active {
-    background-color: #434f56;
+    background-color: #0096a1;
     color: #fff;
+    font-weight: bold;
   }
   .topbar .topbar_burger,
 .topbar .topbar_cross {
     display: none;
+  }
+  .topbar .topbar_logo {
+    margin-left: 8%;
+  }
+  .topbar .toggle {
+    margin-right: 8%;
   }
 
   /* DARK MODE */
@@ -163,8 +214,13 @@ a {
 }
 .portfolio-title {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 110px;
   font-weight: normal;
+}
+@media only screen and (max-width: 630px) {
+  .portfolio-title {
+    margin-top: 10px;
+  }
 }
 
 /******* TABLET AND DESKTOP *******/
@@ -194,6 +250,7 @@ a {
     margin: 0;
     border-radius: 7px;
     background-size: auto 100%;
+    cursor: default;
   }
   .portfolio .image:not(.image_active) {
     flex-grow: 1;
@@ -281,13 +338,25 @@ a {
 }
 .title {
   text-align: center;
-  margin: 20px;
+  margin-top: 100px;
+  margin-bottom: 20px;
   font-weight: normal;
+}
+@media screen and (max-width: 630px) {
+  .title {
+    margin-top: 20px;
+  }
+}
+
+/* DARK MODE */
+.dark .title {
+  color: #fff;
 }
 
 .gallery {
   display: grid;
   width: 90vw;
+  max-width: 1200px;
   margin: 20px auto;
   grid-gap: 10px;
 }
@@ -307,9 +376,35 @@ footer {
   height: 64px;
   background-color: #434f56;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-top: 1px solid #434f56;
+  /*.label {
+      height: 27px;
+      width: 60px;
+      background-color: $color-dark-blue;
+      padding: 5px 8px;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position:relative;
+      .ball {
+          background-color: $color-light-blue;
+          border-radius: 50%;
+          height: 21px;
+          width: 21px;
+          position: absolute;
+          top: 3px;
+          left: 5px;
+          transform: translateX(0px);
+          transition: transform .4s ease;
+      }
+  }
+  .checkbox:checked + .label .ball {
+      transform: translateX(29px);
+  }*/
 }
 footer .copyright {
   font-family: "Dr Sugiyama", cursive;
@@ -318,6 +413,7 @@ footer .copyright {
 }
 footer .social-media {
   text-align: center;
+  margin-right: 8%;
 }
 footer .social-media a {
   display: inline-block;
@@ -332,34 +428,11 @@ footer .social-media i:hover {
   color: #0ebac7;
   transform: scale(1);
 }
+footer .toggle {
+  margin-left: 8%;
+}
 footer .checkbox {
   display: none;
-}
-footer .label {
-  height: 27px;
-  width: 60px;
-  background-color: #0096a1;
-  padding: 5px 8px;
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-footer .label .ball {
-  background-color: #0ebac7;
-  border-radius: 50%;
-  height: 21px;
-  width: 21px;
-  position: absolute;
-  top: 3px;
-  left: 5px;
-  transform: translateX(0px);
-  transition: transform 0.4s ease;
-}
-footer .checkbox:checked + .label .ball {
-  transform: translateX(29px);
 }
 
 /* DARK MODE */
@@ -3420,6 +3493,30 @@ footer .checkbox:checked + .label .ball {
     grid-column: 3/span 2;
     grid-row: 19/span 1;
   }
+}
+
+.apropos {
+  display: grid;
+  width: 90vw;
+  margin: 100px auto;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+.apropos .selfie {
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+  height: 400px;
+  padding-top: 100px;
+  border: 1px solid black;
+}
+.apropos .presentation {
+  grid-column: 2/span 1;
+  grid-row: 1/span 1;
+  height: 800px;
+}
+.apropos .presentation p {
+  font-family: "Raleway", sans-serif;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

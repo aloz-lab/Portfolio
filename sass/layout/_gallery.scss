@@ -1,12 +1,22 @@
 .title {
     text-align: center;
-    margin: 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
     font-weight: normal;
+    @media screen and (max-width: 630px) {
+        margin-top: 20px;
+    }
+}
+
+/* DARK MODE */
+.dark .title {
+    color: $color-font-light;
 }
 
 .gallery {
     display: grid;
     width: 90vw;
+    max-width: 1200px;
     margin: 20px auto;
     grid-gap: 10px;
     a:hover {

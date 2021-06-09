@@ -1,7 +1,10 @@
 .portfolio-title {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 110px;
     font-weight: normal;
+    @media only screen and (max-width: 630px) {
+        margin-top: 10px;
+    }
 }
 
 /******* TABLET AND DESKTOP *******/
@@ -31,6 +34,7 @@
             margin: 0;
             border-radius: 7px;
             background-size: auto 100%;
+            cursor: default;
         }
         &:not(.image_active) {
             flex-grow: 1;

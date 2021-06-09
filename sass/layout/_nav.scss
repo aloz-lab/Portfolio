@@ -1,9 +1,14 @@
 .topbar {
-    background: $color-bgd-light;
+    //background: $color-bgd-light;
+    background: $color-grey;
     border-bottom: 1px solid $color-grey;
+    a {
+        color: $color-font-light;
+    }
     .topbar_logo {
         display: block;
         text-align: center;
+        color: $color-font-light;
         h1 {
             font-family: 'Dr Sugiyama', cursive;
             font-size: 48px;
@@ -34,6 +39,9 @@
         .topbar-nav {
             display: none;
         }
+        .toggle {
+            display: none;
+        }
         .topbar_logo {
             display: block;
             text-align: center;
@@ -54,7 +62,7 @@
             right: 0;
             line-height: 45px;
             padding: 10px 20px 0px 15px;
-            color: gb(20, 20, 20);
+            color: $color-dark-blue;
             border: 0;
             font-size: 1.4em;
             font-weight: bold;
@@ -68,7 +76,7 @@
             top: 0;
             right: 0;
             padding: 10px 20px 0px 15px;
-            color: $color-font-dark;
+            color: $color-dark-blue;
             border: 0;
             font-size: 1.4em;
             line-height: 45px;
@@ -91,12 +99,13 @@
             z-index: 10;
             a {
                 display: block;
+                color: $color-font-dark;
                 text-transform: uppercase;
                 padding: 15px 0 15px 0;
                 border-bottom: #dddddd 1px solid;
             }
             a:hover {
-                background: $color-grey;
+                background: $color-dark-blue;
                 color: $color-font-light;
             }
         }
@@ -111,10 +120,12 @@
     
     .topbar {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         height: 80px;
-        padding: 0 25px;
+        position: fixed;
+        width: 100%;
+        top: 0;
         .topbar-nav {
             text-align: center;
             a {
@@ -128,13 +139,22 @@
         }
         .topbar-nav a:hover,
         .topbar-nav a.topbar-nav_active {
-            background-color: $color-grey;
+            //background-color: $color-grey;
+            background-color: $color-dark-blue;
             color:$color-font-light;
+            font-weight: bold;
         }
         .topbar_burger,
         .topbar_cross {
             display: none;
         }
+        .topbar_logo {
+            margin-left: 8%;
+        }
+        .toggle {
+            margin-right: 8%;
+        }
+        
     }
 
     /* DARK MODE */
