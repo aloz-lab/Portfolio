@@ -17,7 +17,7 @@ footer {
     }
     .social-media {
         text-align: center;
-        margin-right: 8%;
+        margin-left: 8%;
         a {
             display: inline-block; 
             margin: 0 10px;
@@ -31,39 +31,19 @@ footer {
                 transform: scale(1);
             }
         }
-    } 
-    .toggle {
-        margin-left: 8%;
-    }  
-    .checkbox {
-        display: none;
     }
-    /*.label {
-        height: 27px;
-        width: 60px;
-        background-color: $color-dark-blue;
-        padding: 5px 8px;
-        border-radius: 50px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position:relative;
-        .ball {
-            background-color: $color-light-blue;
-            border-radius: 50%;
-            height: 21px;
-            width: 21px;
-            position: absolute;
-            top: 3px;
-            left: 5px;
-            transform: translateX(0px);
-            transition: transform .4s ease;
+    .contact {
+        margin-right: 8%;
+        i {
+            color: $color-dark-blue;
+            transform: scale(0.8);
+            transition: all .3s;
+            &:hover {
+                color: $color-light-blue;
+                transform: scale(1);
+            }
         }
-    }
-    .checkbox:checked + .label .ball {
-        transform: translateX(29px);
-    }*/
+    }   
 }
 
 

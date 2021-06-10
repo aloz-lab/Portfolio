@@ -24,10 +24,11 @@ $(document).ready(function() {
         $(this).addClass("image_active");
     });   
 
-        /******* DARK MODE *******/
-        /*$("#dark-mode").on("change", function() {
-            $("body").toggleClass("dark");
-        });*/
+    /******* DARK MODE *******/
+
+    /*$("#dark-mode").on("change", function() {
+        $("body").toggleClass("dark");
+    });*/
 
     let darkMode;
 
@@ -41,19 +42,28 @@ $(document).ready(function() {
 
     if (localStorage.getItem("darkMode") == "true") {
         $("body").addClass("dark");
-        $(".toggle").addClass("night");
+        //$(".toggle .label .ball").css("left", "34px");
+        //$(".toggle").addClass("night");
+    } else {
+        //$(".toggle .label .ball").css("left", "5px");
     }
 
     $("#dark-mode").on("click", function() {
         if (!$("body").hasClass("dark")) {
             $("body").addClass("dark");
-            $(".toggle").addClass("night");
+            //$('input[type="checkbox"]').attr("checked", "checked");
+            //$(".toggle .checkbox:checked + .label .ball").css("transform", "translateX(29px)");
+            //$(".toggle").addClass("night");
             localStorage.setItem("darkMode", "true");
         } else {
             $("body").removeClass("dark");
-            $(".toggle").removeClass("night");
+            //$('input[type="checkbox"]').removeAttr("checked");
+            //$(".toggle .checkbox .label .ball").css("transform", "translateX(0px)");
+            //$(".toggle").removeClass("night");
             localStorage.setItem("darkMode", "null");
         }  
     });
+
+    //localStorage.removeItem("darkMode");
 
 });

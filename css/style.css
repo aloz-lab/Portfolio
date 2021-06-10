@@ -21,14 +21,16 @@ a {
 /* DARK MODE */
 .dark {
   background-color: #000;
-  /* DARK MODE */
 }
-.dark .portfolio-title {
+.dark .portfolio-title, .dark .title {
   color: #fff;
 }
 
 .toggle .checkbox {
   display: none;
+}
+.toggle .checkbox:checked + .label .ball {
+  transform: translateX(29px);
 }
 .toggle .label {
   height: 27px;
@@ -55,16 +57,6 @@ a {
 }
 
 /******* DARK MODE *******/
-.toggle.night .ball {
-  transform: translateX(29px);
-  transition: transform 0s ease;
-}
-
-.dark .checkbox:checked + .label .ball {
-  transform: translateX(29px);
-  transition: transform 0.4s ease;
-}
-
 .topbar {
   background: #434f56;
   border-bottom: 1px solid #434f56;
@@ -387,32 +379,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #434f56;
-  /*.label {
-      height: 27px;
-      width: 60px;
-      background-color: $color-dark-blue;
-      padding: 5px 8px;
-      border-radius: 50px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position:relative;
-      .ball {
-          background-color: $color-light-blue;
-          border-radius: 50%;
-          height: 21px;
-          width: 21px;
-          position: absolute;
-          top: 3px;
-          left: 5px;
-          transform: translateX(0px);
-          transition: transform .4s ease;
-      }
-  }
-  .checkbox:checked + .label .ball {
-      transform: translateX(29px);
-  }*/
 }
 footer .copyright {
   font-family: "Dr Sugiyama", cursive;
@@ -421,7 +387,7 @@ footer .copyright {
 }
 footer .social-media {
   text-align: center;
-  margin-right: 8%;
+  margin-left: 8%;
 }
 footer .social-media a {
   display: inline-block;
@@ -436,11 +402,17 @@ footer .social-media i:hover {
   color: #0ebac7;
   transform: scale(1);
 }
-footer .toggle {
-  margin-left: 8%;
+footer .contact {
+  margin-right: 8%;
 }
-footer .checkbox {
-  display: none;
+footer .contact i {
+  color: #0096a1;
+  transform: scale(0.8);
+  transition: all 0.3s;
+}
+footer .contact i:hover {
+  color: #0ebac7;
+  transform: scale(1);
 }
 
 /* DARK MODE */
@@ -3506,25 +3478,51 @@ footer .checkbox {
 .apropos {
   display: grid;
   width: 90vw;
-  margin: 100px auto;
+  margin: 40px auto;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
 }
 .apropos .selfie {
   grid-column: 1/span 1;
   grid-row: 1/span 1;
-  height: 400px;
-  padding-top: 100px;
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  object-fit: cover;
   border: 1px solid black;
 }
 .apropos .presentation {
   grid-column: 2/span 1;
-  grid-row: 1/span 1;
-  height: 800px;
+  grid-row: 1/span 2;
+  max-width: 600px;
 }
 .apropos .presentation p {
   font-family: "Raleway", sans-serif;
-  color: black;
+  color: #000;
+  padding: 10px 20px;
+}
+@media screen and (max-width: 630px) {
+  .apropos {
+    margin: 30px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .apropos .image {
+    grid-column: 2/span 2;
+    grid-row: 1/span 1;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .apropos .presentation {
+    grid-column: 1/span 4;
+    grid-row: 2/span 1;
+  }
+}
+
+/* DARK MODE */
+.dark .presentation p {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

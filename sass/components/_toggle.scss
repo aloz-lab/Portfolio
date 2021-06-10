@@ -1,6 +1,9 @@
 .toggle {
     .checkbox {
         display: none;
+        &:checked + .label .ball {
+            transform: translateX(29px);
+        }
     }
     .label {
         height: 27px;
@@ -25,18 +28,19 @@
             transition: transform .4s ease;
         }
     }
-    //.checkbox:checked + .label .ball {
-        //transform: translateX(29px);
-    //}
 }
+    
+
 
 /******* DARK MODE *******/
-.toggle.night .ball {
-    transform: translateX(29px);
-    transition: transform 0s ease;
-}
+//.toggle.night .ball {
+    //left: 34px;
+    //transform: translateX(29px);
+    //transition: transform 0s ease;
+//}
 
-.dark .checkbox:checked + .label .ball {
-    transform: translateX(29px);
-    transition: transform .4s ease;
-}
+//.dark .checkbox:checked + .label .ball {
+    //left: 34px;
+    //transform: translateX(29px);
+    //transition: transform .4s ease;
+//}

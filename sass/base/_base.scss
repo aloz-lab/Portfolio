@@ -21,8 +21,7 @@ a {
 /* DARK MODE */
 .dark {
     background-color: $color-bgd-dark;
-    /* DARK MODE */
-    .portfolio-title {
+    .portfolio-title, .title {
     color: $color-font-light;
-}
+    }
 }
