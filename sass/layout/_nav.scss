@@ -1,5 +1,25 @@
+.container {
+    position: relative;
+}
+
+.skiptocontent {
+    position: absolute;
+    top: -200px;
+    left: 20vw;
+    background-color: brown;
+    color: white;
+    padding: 5px;
+    outline: solid 2px brown;
+    transition : top 1s ease-out;
+    z-index: 10;
+    &:focus {
+        top: -85px;
+    }
+}
+
 .topbar {
     //background: $color-bgd-light;
+    //position: relative;
     background: $color-grey;
     border-bottom: 1px solid $color-grey;
     a {
@@ -34,6 +54,9 @@
 /******* MOBILE *******/
 
 @media only screen and (max-width: 630px) {
+    .skiptocontent:focus {
+        top: 0;
+    }
     .topbar {
         height: 68px;
         position: relative;
@@ -146,7 +169,7 @@
         .topbar-nav a.topbar-nav_active {
             //background-color: $color-grey;
             background-color: $color-dark-blue;
-            color:$color-font-light;
+            color: $color-font-light;
             font-weight: bold;
             border-bottom: solid 4px $color-grey;
         }

@@ -74,6 +74,25 @@ a {
 }
 
 /******* DARK MODE *******/
+.container {
+  position: relative;
+}
+
+.skiptocontent {
+  position: absolute;
+  top: -200px;
+  left: 20vw;
+  background-color: brown;
+  color: white;
+  padding: 5px;
+  outline: solid 2px brown;
+  transition: top 1s ease-out;
+  z-index: 10;
+}
+.skiptocontent:focus {
+  top: -85px;
+}
+
 .topbar {
   background: #192734;
   border-bottom: 1px solid #192734;
@@ -108,6 +127,10 @@ a {
 
 /******* MOBILE *******/
 @media only screen and (max-width: 630px) {
+  .skiptocontent:focus {
+    top: 0;
+  }
+
   .topbar {
     height: 68px;
     position: relative;
