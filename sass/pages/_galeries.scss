@@ -10,6 +10,7 @@
     .galeries-image {
         cursor: pointer;
         height: 250px;
+        //border: solid 2px black;
         @media screen and (max-width: 630px) {
             height: 150px;
         }
@@ -45,7 +46,33 @@
             visibility: visible;
             opacity: 1;
         }
+        a:focus {
+            //outline: solid 4px $color-light-blue;
+            outline: solid 4px black;
+            .text-container {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        /*a::-moz-focus-inner {
+            border: 0;
+        }*/
     }
+
+
+    /* DARK MODE */
+
+    .dark {
+        background-color: blue;
+    }
+
+    .dark .galeries a:focus {
+        outline: solid 4px white;
+    }
+
+
+    /* MOBILE */
+
     @media screen and (max-width: 630px) {
         grid-template-columns: 1fr;
         margin: 20px;

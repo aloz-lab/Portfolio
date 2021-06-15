@@ -26,11 +26,28 @@ a {
   color: #fff;
 }
 
-.toggle .checkbox {
-  display: none;
+.toggle {
+  position: relative;
 }
 .toggle .checkbox:checked + .label .ball {
   transform: translateX(29px);
+}
+.toggle .checkbox:focus + .label {
+  padding: 7px 8px 9px 8px;
+  border: solid 2px white;
+}
+.toggle .checkbox:focus + .label .ball {
+  top: 1px;
+  left: 4px;
+}
+.toggle .checkbox:focus:checked + .label .ball {
+  transform: translateX(27px);
+}
+.toggle .checkbox.hidden {
+  position: absolute;
+  top: -10000px;
+  height: 1px;
+  width: 1px;
 }
 .toggle .label {
   height: 27px;
@@ -58,8 +75,8 @@ a {
 
 /******* DARK MODE *******/
 .topbar {
-  background: #434f56;
-  border-bottom: 1px solid #434f56;
+  background: #192734;
+  border-bottom: 1px solid #192734;
 }
 .topbar a {
   color: #fff;
@@ -69,12 +86,12 @@ a {
   text-align: center;
   color: #fff;
 }
-.topbar .topbar_logo h1 {
+.topbar .topbar_logo .logo1 {
   font-family: "Dr Sugiyama", cursive;
   font-size: 48px;
   line-height: 54px;
 }
-.topbar .topbar_logo h2 {
+.topbar .topbar_logo .logo2 {
   text-transform: uppercase;
   font-family: "Poiret One", cursive;
   font-size: 1.5rem;
@@ -83,32 +100,35 @@ a {
 
 /******* DARK MODE ********/
 .dark .topbar {
-  background-color: #323b40;
+  background-color: #192734;
 }
-.dark .topbar h1, .dark .topbar h2, .dark .topbar .topbar_burger, .dark .topbar .topbar_cross, .dark .topbar a {
+.dark .topbar .topbar_burger, .dark .topbar .topbar_cross, .dark .topbar a {
   color: #fff;
 }
 
 /******* MOBILE *******/
 @media only screen and (max-width: 630px) {
   .topbar {
-    height: 64px;
+    height: 68px;
+    position: relative;
   }
   .topbar .topbar-nav {
     display: none;
   }
   .topbar .toggle {
-    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
   }
   .topbar .topbar_logo {
     display: block;
     text-align: center;
   }
-  .topbar .topbar_logo h1 {
+  .topbar .topbar_logo .logo1 {
     font-size: 40px;
     line-height: 46px;
   }
-  .topbar .topbar_logo h2 {
+  .topbar .topbar_logo .logo2 {
     font-size: 1.3rem;
     line-height: 0.8rem;
   }
@@ -187,12 +207,21 @@ a {
     margin: 0 10px;
     padding: 10px;
     transition: all 0.3s;
+    border-bottom: solid 4px transparent;
   }
   .topbar .topbar-nav a:hover,
 .topbar .topbar-nav a.topbar-nav_active {
     background-color: #0096a1;
     color: #fff;
     font-weight: bold;
+    border-bottom: solid 4px #192734;
+  }
+  .topbar .topbar-nav a:focus {
+    outline: none;
+    border-bottom: solid 4px #fff;
+  }
+  .topbar .topbar-nav a::-moz-focus-inner {
+    border: 0;
   }
   .topbar .topbar_burger,
 .topbar .topbar_cross {
@@ -203,6 +232,9 @@ a {
   }
   .topbar .toggle {
     margin-right: 8%;
+  }
+  .topbar .toggle input:focus {
+    outline: solid 4px black;
   }
 
   /* DARK MODE */
@@ -270,6 +302,10 @@ a {
   .portfolio .image a {
     color: #fff;
     transition: 0.4s ease;
+    /*&:focus {
+        color: $color-light-blue;
+        font-size: 20px;
+    }*/
   }
   .portfolio .image a:hover {
     color: #0ebac7;
@@ -317,6 +353,10 @@ a {
   .portfolio .image a {
     color: #fff;
   }
+  .portfolio .image a:focus {
+    font-weight: 600;
+    font-size: 20px;
+  }
   .portfolio .image .text {
     position: absolute;
     bottom: 10px;
@@ -353,6 +393,10 @@ a {
   color: #fff;
 }
 
+.dark .gallery a:focus {
+  outline: solid 4px white;
+}
+
 .gallery {
   display: grid;
   width: 90vw;
@@ -362,6 +406,9 @@ a {
 }
 .gallery a:hover {
   opacity: 0.7;
+}
+.gallery a:focus {
+  outline: solid 4px black;
 }
 .gallery .gallery_img {
   width: 100%;
@@ -374,11 +421,11 @@ footer {
   bottom: 0;
   width: 100%;
   height: 64px;
-  background-color: #434f56;
+  background-color: #192734;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #434f56;
+  border-top: 1px solid #192734;
 }
 footer .copyright {
   font-family: "Dr Sugiyama", cursive;
@@ -393,6 +440,16 @@ footer .social-media a {
   display: inline-block;
   margin: 0 10px;
 }
+footer .social-media a:focus {
+  outline: none;
+}
+footer .social-media a:focus i {
+  color: #fff;
+  transform: scale(1);
+}
+footer .social-media a::-moz-focus-inner {
+  border: 0;
+}
 footer .social-media i {
   color: #0096a1;
   transform: scale(0.8);
@@ -404,6 +461,13 @@ footer .social-media i:hover {
 }
 footer .contact {
   margin-right: 8%;
+}
+footer .contact a:focus {
+  outline: none;
+}
+footer .contact a:focus i {
+  color: #fff;
+  transform: scale(1);
 }
 footer .contact i {
   color: #0096a1;
@@ -429,10 +493,15 @@ footer .contact i:hover {
   align-content: stretch;
   row-gap: 20px;
   column-gap: 20px;
+  /* DARK MODE */
+  /* MOBILE */
 }
 .galeries .galeries-image {
   cursor: pointer;
   height: 250px;
+  /*a::-moz-focus-inner {
+      border: 0;
+  }*/
 }
 @media screen and (max-width: 630px) {
   .galeries .galeries-image {
@@ -472,6 +541,19 @@ footer .contact i:hover {
 .galeries .galeries-image:hover .text-container {
   visibility: visible;
   opacity: 1;
+}
+.galeries .galeries-image a:focus {
+  outline: solid 4px black;
+}
+.galeries .galeries-image a:focus .text-container {
+  visibility: visible;
+  opacity: 1;
+}
+.galeries .dark {
+  background-color: blue;
+}
+.galeries .dark .galeries a:focus {
+  outline: solid 4px white;
 }
 @media screen and (max-width: 630px) {
   .galeries {

@@ -1,9 +1,27 @@
 .toggle {
+    position:relative;
     .checkbox {
-        display: none;
+        //display: none;
         &:checked + .label .ball {
             transform: translateX(29px);
         }
+        &:focus + .label {
+            padding: 7px 8px 9px 8px;
+            border: solid 2px white;
+            .ball {
+                top: 1px;
+                left: 4px; 
+            }
+        }
+       &:focus:checked + .label .ball {
+            transform: translateX(27px);
+        }
+    }
+    .checkbox.hidden {
+        position: absolute;
+        top: -10000px;
+        height: 1px;
+        width: 1px;
     }
     .label {
         height: 27px;

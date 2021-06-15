@@ -21,6 +21,16 @@ footer {
         a {
             display: inline-block; 
             margin: 0 10px;
+            &:focus {
+                outline: none;
+                i {
+                color: $color-font-light;
+                transform: scale(1);
+                }
+            }
+        }
+        a::-moz-focus-inner {
+            border: 0;
         }
         i {
             color: $color-dark-blue;
@@ -34,6 +44,13 @@ footer {
     }
     .contact {
         margin-right: 8%;
+        a:focus {
+                outline: none;
+                i {
+                color: $color-font-light;
+                transform: scale(1);
+                }
+            }
         i {
             color: $color-dark-blue;
             transform: scale(0.8);

@@ -22,7 +22,93 @@ $(document).ready(function() {
     $(".image").click(function() {
         $(".image").removeClass("image_active");
         $(this).addClass("image_active");
-    });   
+    }); 
+    
+    /******** PORTFOLIO ACCESSIBILITY ********/
+
+    /*var image;
+    var imageSup;
+    var lien;
+    var lienSup;
+    $(".image").each(function(index) {
+        image = ".image-" + (index+1); 
+        imageSup = ".image-" + (index+2); 
+        lien = image + " a";
+        lienSup = imageSup + " a";
+        console.log(lien);
+        console.log(lienSup);
+        $(lien).blur(function() {           
+            $(document).keyup(function(touche){
+                var appui = touche.which || touche.keyCode;
+                if (appui == 9) { 
+                    $(image).removeClass("image_active");
+                    $(imageSup).addClass("image_active");
+                    if (index < 5) {
+                        $(lienSup).focus();
+                    } else {
+                        $(document).off("keyup"); 
+                    }    
+                }    
+            });   
+        });
+        image = ".image-";
+        imageSup = ".image-";
+    })*/
+
+    $(".image-1 a").blur(function() {  
+        $(document).keyup(function(touche){
+            var appui = touche.which || touche.keyCode;
+            if (appui == 9) { 
+                $(".image-1").removeClass("image_active");
+                $(".image-2").addClass("image_active");
+                $(".image-2 a").focus();
+            }    
+        });   
+    });
+
+    $(".image-2 a").blur(function() {    
+        $(document).keyup(function(touche){
+            var appui = touche.which || touche.keyCode;
+            if (appui == 9) {
+                $(".image-2").removeClass("image_active");
+                $(".image-3").addClass("image_active");
+                $(".image-3 a").focus();
+            }
+        });   
+    });
+    
+    $(".image-3 a").blur(function() {    
+        $(document).keyup(function(touche){
+            var appui = touche.which || touche.keyCode;
+            if (appui == 9) {
+                $(".image-3").removeClass("image_active");
+                $(".image-4").addClass("image_active");
+                $(".image-4 a").focus();
+            }
+        });   
+    });
+
+    $(".image-4 a").blur(function() {    
+        $(document).keyup(function(touche){
+            var appui = touche.which || touche.keyCode;
+            if (appui == 9) {
+                $(".image-4").removeClass("image_active");
+                $(".image-5").addClass("image_active");
+                $(".image-5 a").focus();
+            }
+        });   
+    });
+    
+    $(".image-5 a").blur(function() { 
+        /*$(document).keyup(function(touche){
+            var appui = touche.which || touche.keyCode;
+            if (appui == 9) {
+                $(".image-5").removeClass("image_active");
+                $(".image-1").addClass("image_active");
+            }*/
+        $(document).off("keyup");    
+    });
+
 
     /******* DARK MODE *******/
 

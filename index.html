@@ -18,8 +18,8 @@
   <!-- HEADER -->
     <header class="topbar" id="topbar">
         <div class="topbar_logo">
-            <h1>Alozi</h1>
-            <h2>Photo</h2>
+            <p class="logo1">Alozi</p>
+            <p class="logo2">Photo</p>
         </div>
         <button class="topbar_burger" id="topbar_burger">
           <i class="fa fa-bars"></i>
@@ -28,12 +28,12 @@
           <i class="fas fa-times"></i>
         </button>  
         <nav class="topbar-nav">
-            <a href="#" class="topbar-nav_active">Accueil</a>
+            <a href="#" class="topbar-nav_active" id="accueil">Accueil</a>
             <a href="pages/galeries.html">Galeries</a>
             <a href="pages/apropos.html">A propos</a>
         </nav>
         <div class="toggle" id="toggle1"> 
-          <input type="checkbox" class="checkbox" id="dark-mode" />
+          <input type="checkbox" class="checkbox hidden" id="dark-mode"/>
           <label for="dark-mode" class="label">
             <i class="fas fa-moon"></i>
             <i class="fas fa-sun"></i>
@@ -47,7 +47,7 @@
 
     <main class="portfolio">
         
-          <div class="image image_active" style="background: url(./images/Thailande/201901_Thailande-29.jpg) center/cover;">   
+          <div class="image image-1 image_active" style="background: url(./images/Thailande/201901_Thailande-29.jpg) center/cover;">   
               <div class="text-container">
                 <a href="pages/thailande.html">
                   <div class="text">
@@ -58,7 +58,8 @@
               </div>
           </div>
       
-          <div class="image" style="background: url(./images/Ethiopie/201412_Ethiopie-2.jpg) center/cover;">
+          <div class="image image-2" style="background: url(./images/Ethiopie/201412_Ethiopie-2.jpg) center/cover;">
+            <a href="pages/ethiopie.html"></a>
             <div class="text-container">
               <a href="pages/ethiopie.html">
                 <div class="text">
@@ -69,7 +70,8 @@
             </div>
           </div>
       
-          <div class="image" style="background: url(./images/Turquie/201207_Turquie_0398.jpg) center/cover;">
+          <div class="image image-3" style="background: url(./images/Turquie/201207_Turquie_0398.jpg) center/cover;">
+            <a href="pages/turquie.html"></a>
             <div class="text-container">
               <a href="pages/turquie.html">
                 <div class="text">
@@ -80,7 +82,8 @@
             </div>
           </div>
       
-          <div class="image" style="background: url(./images/Reunion/2011_Réunion-71.jpg) center/cover;">
+          <div class="image image-4" style="background: url(./images/Reunion/2011_Réunion-71.jpg) center/cover;">
+            <a href="pages/reunion.html"></a>
             <div class="text-container">
               <a href="pages/reunion.html">
                 <div class="text">
@@ -91,7 +94,8 @@
             </div>
           </div>
 
-          <div class="image" style="background: url(./images/Mexique/2009_Mexique-514.jpg) center/cover;">
+          <div class="image image-5" style="background: url(./images/Mexique/2009_Mexique-514.jpg) center/cover;">
+            <a href="pages/mexique.html"></a>
             <div class="text-container">
               <a href="pages/mexique.html">
                 <div class="text">
@@ -107,14 +111,14 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="social-media">
-        <a href="https://www.instagram.com/alozi/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://www.linkedin.com/in/anne-lozier/"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://www.instagram.com/alozi/" target="_blank" id="insta"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/anne-lozier/" id="linkedin"><i class="fab fa-linkedin fa-2x"></i></a>
       </div>
       <div class="copyright">
         Alozi | 2021
       </div>
       <div class="contact">
-          <a href="mailto:alozier45@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+          <a href="mailto:alozier45@gmail.com" id="mail"><i class="far fa-envelope fa-2x"></i></a>
       </div>
     </footer>
 

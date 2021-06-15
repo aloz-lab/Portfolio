@@ -12,6 +12,9 @@
 .dark .title {
     color: $color-font-light;
 }
+.dark .gallery a:focus {
+    outline: solid 4px white;
+}
 
 .gallery {
     display: grid;
@@ -21,6 +24,9 @@
     grid-gap: 10px;
     a:hover {
         opacity: 0.7;
+    }
+    a:focus {
+        outline: solid 4px black;
     }
     .gallery_img {
         width: 100%;
