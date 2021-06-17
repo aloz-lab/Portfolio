@@ -24,6 +24,9 @@
             color: $color-font-dark;
             padding: 10px 20px;
         }
+        a {
+            text-decoration: underline;
+        }
     }
     @media screen and (max-width: 630px) {
         margin: 30px auto;

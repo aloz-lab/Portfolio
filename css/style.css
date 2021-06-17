@@ -82,6 +82,7 @@ a {
   position: absolute;
   top: -200px;
   left: 20vw;
+  width: 150px;
   background-color: brown;
   color: white;
   padding: 5px;
@@ -99,6 +100,7 @@ a {
 }
 .topbar a {
   color: #fff;
+  font-weight: bold;
 }
 .topbar .topbar_logo {
   display: block;
@@ -128,7 +130,8 @@ a {
 /******* MOBILE *******/
 @media only screen and (max-width: 630px) {
   .skiptocontent:focus {
-    top: 0;
+    top: 15px;
+    left: 15vw;
   }
 
   .topbar {
@@ -205,7 +208,18 @@ a {
     border-bottom: #dddddd 1px solid;
   }
   .topbar.responsive .topbar-nav a:hover {
-    background: #0096a1;
+    background: #c6ced2;
+  }
+  .topbar.responsive .topbar-nav a:focus {
+    outline: none;
+    background-color: #c6ced2;
+  }
+  .topbar.responsive .topbar-nav a.topbar-nav_active {
+    color: #fff;
+    background-color: #192734;
+  }
+  .topbar.responsive button:focus {
+    outline: none;
     color: #fff;
   }
 }
@@ -219,6 +233,9 @@ a {
     position: fixed;
     width: 100%;
     top: 0;
+    /*.topbar-nav a::-moz-focus-inner {
+        border: 0;
+    }*/
   }
   .topbar .topbar-nav {
     text-align: center;
@@ -234,17 +251,21 @@ a {
   }
   .topbar .topbar-nav a:hover,
 .topbar .topbar-nav a.topbar-nav_active {
-    background-color: #0096a1;
-    color: #fff;
-    font-weight: bold;
+    background-color: #c6ced2;
+    color: #000;
+  }
+  .topbar .topbar-nav a.topbar-nav_active {
     border-bottom: solid 4px #192734;
+  }
+  .topbar .topbar-nav a.topbar-nav_active:focus {
+    border-bottom: solid 4px #0096a1;
+  }
+  .topbar .topbar-nav a:hover {
+    border-bottom: transparent;
   }
   .topbar .topbar-nav a:focus {
     outline: none;
     border-bottom: solid 4px #fff;
-  }
-  .topbar .topbar-nav a::-moz-focus-inner {
-    border: 0;
   }
   .topbar .topbar_burger,
 .topbar .topbar_cross {
@@ -255,9 +276,6 @@ a {
   }
   .topbar .toggle {
     margin-right: 8%;
-  }
-  .topbar .toggle input:focus {
-    outline: solid 4px black;
   }
 
   /* DARK MODE */
@@ -522,6 +540,9 @@ footer .contact i:hover {
 .galeries .galeries-image {
   cursor: pointer;
   height: 250px;
+  /*a:focus-visible {
+      outline: solid 4px black;
+  }*/
   /*a::-moz-focus-inner {
       border: 0;
   }*/
@@ -3606,6 +3627,9 @@ footer .contact i:hover {
   font-family: "Raleway", sans-serif;
   color: #000;
   padding: 10px 20px;
+}
+.apropos .presentation a {
+  text-decoration: underline;
 }
 @media screen and (max-width: 630px) {
   .apropos {

@@ -4,9 +4,10 @@ $(document).ready(function() {
     $(".topbar_burger").click(function(e) {
         $("#topbar").addClass(" responsive");
         $(".topbar-nav").slideToggle("slow", function() {
-           $(".topbar_burger").hide();
+            $(".topbar_burger").hide();
             $(".topbar_cross").show();
         });
+        $(".topbar_cross").attr("aria-expanded", "true");
     });
     
     $(".topbar_cross").click(function(e) {
@@ -16,7 +17,9 @@ $(document).ready(function() {
             $(".topbar_burger").show();
             $("#topbar").removeClass(" responsive");
         });
+        $(".topbar_burger").attr("aria-expanded", "false");
     });
+
  
     /******** PORTFOLIO ********/
     $(".image").click(function() {

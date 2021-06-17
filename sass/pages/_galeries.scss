@@ -47,13 +47,16 @@
             opacity: 1;
         }
         a:focus {
-            //outline: solid 4px $color-light-blue;
             outline: solid 4px black;
+            //outline: none;
             .text-container {
                 visibility: visible;
                 opacity: 1;
             }
         }
+        /*a:focus-visible {
+            outline: solid 4px black;
+        }*/
         /*a::-moz-focus-inner {
             border: 0;
         }*/

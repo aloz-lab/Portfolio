@@ -17,44 +17,51 @@
 <body>
     <!-- HEADER -->
     <div class="container">
-      <a href="#main-content" class="skiptocontent">Skip to content</a>
+      <a href="#main-content" class="skiptocontent">Aller au contenu principal</a>
     </div>
+
     <header class="topbar" id="topbar">
-        <div class="topbar_logo">
-          <p class="logo1">Alozi</p>
-          <p class="logo2">Photo</p>
+        <div class="topbar_logo" aria-label="Nom du site">
+            <p class="logo1">Alozi</p>
+            <p class="logo2">Photo</p>
         </div>
-        <button class="topbar_burger" id="topbar_burger">
-          <i class="fa fa-bars"></i>
-        </button>
-        <button class="topbar_cross" id="topbar_cross">
-          <i class="fas fa-times"></i>
-        </button>  
-        <nav class="topbar-nav">
-            <a href="../index.html">Accueil</a>
-            <a href="galeries.html">Galeries</a>
-            <a href="#" class="topbar-nav_active">A propos</a>
+
+        <nav role="navigation">
+            <button class="topbar_burger" id="topbar_burger" aria-label="Ouverture du menu de navigation" aria-controls="topbar-nav" aria-expanded="false">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <button class="topbar_cross" id="topbar_cross" aria-label="Fermeture du menu de navigation">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>  
+            <div class="topbar-nav" id="topbar-nav">
+                <a href="../index.html">Accueil</a>
+                <a href="galeries.html">Galeries</a>
+                <a href="#" class="topbar-nav_active" aria-current="true">A propos</a>
+            </div>
         </nav>
-        <div class="toggle">
-          <input type="checkbox" class="checkbox hidden" id="dark-mode" />
-          <label for="dark-mode" class="label">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball"></div>
-          </label>
+        
+        <div class="toggle" id="toggle1" aria-label="Bouton de bascule entre les modes Jour et Nuit"> 
+            <input type="checkbox" class="checkbox hidden" id="dark-mode"/>
+            <label for="dark-mode" class="label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
         </div>
     </header>
     
     <!-- PRESENTATION -->
     <h1 class="title">A propos</h1>
 
-    <main class="apropos">
+    <main class="apropos" id="main-content">
       <div class="image">
-        <img src="../images/Selfie.jpg" class="selfie" alt="">
+        <img src="../images/Selfie.jpg" class="selfie" alt="Selfie">
       </div>
       <div class="presentation">
-        <p>Blablabla</p>
-        <p>Il1 B8 ao gq Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolores error cupiditate explicabo deserunt fuga, deleniti iusto delectus facere a expedita cumque unde veniam ab repellendus ad consequatur. Quas, quos!</p>
+        <p>Blablabla Photo Photographe amatrice,</p>
+        <p>Il1 B8 ao gq Blablabla Dév web. J'ai effectué une reconversion dans le développement web et ai donc réalisé moi-même ce site.</p>
+        <p>Une notion importante dans la conception web est l'accessibilité. Un site web doit en effet être conçu de sorte qu'il fonctionne pour le maximum des internautes, quel que soit leur matériel, leur logiciel, leur langue ou leur capacité. L'accessibilité du web prend en compte les personnes handicapées mais aussi toute personne en "situation de handicap" (personne âgée, personne utilisant un petit écran ou une connexion internet lente, personne ayant un handicap temporaire comme un bras cassé ou ayant perdu ses lunettes...). J'ai essayé de rendre ce site accessible. Ce n'est pas parfait, mais j'essaye de l'améliorer !</p>
+        <p>Je m'intéresse également à l'écoconception. Une étude de <a href="https://collectif.greenit.fr/" target=_blank> GreenIt</a> sur l'empreinte environnementale du numérique mondial (2020), estime que le numérique est responsable d'environ 4% des émissions de Gaz à Effet de Serre (GES) et pourrait atteindre 5.6% en 2025. Afin de prendre conscience de l’impact environnemental de l’internet, l'outil <a href="http://www.ecoindex.fr/quest-ce-que-ecoindex/" target=_blank>EcoIndex</a>, permet d'évaluer la performance environnementale d'un site et de détecter la mise en oeuvre de 23 bonnes pratiques. Mon site a ainsi un EcoIndex de 90/100 (Note : A).</p>
       </div>
     </main>
 
@@ -68,7 +75,7 @@
         Alozi | 2021
       </div>
       <div class="contact">
-          <a href="mailto:alozier45@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+          <a href="mailto:alozier.photo@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
       </div>
     </footer>
 

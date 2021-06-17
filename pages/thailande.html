@@ -18,26 +18,31 @@
 <body>
     <!-- HEADER -->
     <div class="container">
-        <a href="#main-content" class="skiptocontent">Skip to content</a>
+        <a href="#main-content" class="skiptocontent">Aller au contenu principal</a>
     </div>
+
     <header class="topbar" id="topbar">
-        <div class="topbar_logo">
+        <div class="topbar_logo" aria-label="Nom du site">
             <p class="logo1">Alozi</p>
             <p class="logo2">Photo</p>
         </div>
-        <button class="topbar_burger" id="topbar_burger">
-            <i class="fa fa-bars"></i>
-        </button>
-        <button class="topbar_cross" id="topbar_cross">
-            <i class="fas fa-times"></i>
-        </button>  
-        <nav class="topbar-nav">
-            <a href="../index.html">Accueil</a>
-            <a href="galeries.html" class="topbar-nav_active">Galeries</a>
-            <a href="apropos.html">A propos</a>
+
+        <nav role="navigation">
+            <button class="topbar_burger" id="topbar_burger" aria-label="Ouverture du menu de navigation" aria-controls="topbar-nav" aria-expanded="false">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <button class="topbar_cross" id="topbar_cross" aria-label="Fermeture du menu de navigation">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>  
+            <div class="topbar-nav" id="topbar-nav">
+                <a href="../index.html">Accueil</a>
+                <a href="galeries.html" class="topbar-nav_active" aria-current="true">Galeries</a>
+                <a href="apropos.html">A propos</a>
+            </div>
         </nav>
-        <div class="toggle">
-            <input type="checkbox" class="checkbox hidden" id="dark-mode" />
+  
+        <div class="toggle" id="toggle1" aria-label="Bouton de bascule entre les modes Jour et Nuit"> 
+            <input type="checkbox" class="checkbox hidden" id="dark-mode"/>
             <label for="dark-mode" class="label">
                 <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
@@ -47,7 +52,7 @@
     </header>
     
     <!-- GALERIE -->
-    <main>
+    <main id="main-content">
         <h1 class="title">Thaïlande</h1>
 
         <div class="gallery gallery-thailande">
@@ -330,7 +335,7 @@
           Alozi | 2021
         </div>
         <div class="contact">
-            <a href="mailto:alozier45@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+            <a href="mailto:alozi.photo@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
         </div>
     </footer>
 

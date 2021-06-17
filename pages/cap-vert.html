@@ -18,150 +18,155 @@
 <body>
     <!-- HEADER -->
     <div class="container">
-      <a href="#main-content" class="skiptocontent">Skip to content</a>
+      <a href="#main-content" class="skiptocontent">Aller au contenu principal</a>
     </div>
+
     <header class="topbar" id="topbar">
-        <div class="topbar_logo">
-        <p class="logo1">Alozi</p>
-        <p class="logo2">Photo</p>
+        <div class="topbar_logo" aria-label="Nom du site">
+            <p class="logo1">Alozi</p>
+            <p class="logo2">Photo</p>
         </div>
-        <button class="topbar_burger" id="topbar_burger">
-        <i class="fa fa-bars"></i>
-        </button>
-        <button class="topbar_cross" id="topbar_cross">
-        <i class="fas fa-times"></i>
-        </button>  
-        <nav class="topbar-nav">
-            <a href="../index.html">Accueil</a>
-            <a href="galeries.html" class="topbar-nav_active">Galeries</a>
-            <a href="apropos.html">A propos</a>
+
+        <nav role="navigation">
+            <button class="topbar_burger" id="topbar_burger" aria-label="Ouverture du menu de navigation" aria-controls="topbar-nav" aria-expanded="false">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <button class="topbar_cross" id="topbar_cross" aria-label="Fermeture du menu de navigation">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>  
+            <div class="topbar-nav" id="topbar-nav">
+                <a href="../index.html">Accueil</a>
+                <a href="galeries.html" class="topbar-nav_active" aria-current="true">Galeries</a>
+                <a href="apropos.html">A propos</a>
+            </div>
         </nav>
-        <div class="toggle">
-        <input type="checkbox" class="checkbox hidden" id="dark-mode" />
-        <label for="dark-mode" class="label">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball"></div>
-        </label>
+    
+        <div class="toggle" id="toggle1" aria-label="Bouton de bascule entre les modes Jour et Nuit"> 
+            <input type="checkbox" class="checkbox hidden" id="dark-mode"/>
+            <label for="dark-mode" class="label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
         </div>
-    </header>   
+    </header>
     
     <!-- GALERIE -->
-    <main>
+    <main id="main-content">
         <h1 class="title">Cap Vert</h1>
 
         <div class="gallery gallery-cap-vert">
             <div class="gallery_item gallery_item--1">
                 <a href="../images/CapVert/201101_CAP_VERT-5.jpg" class="fresco"
-                data-fresco-caption="Port de Mindelo - Cap Vert 2011"
+                data-fresco-caption="Port de Mindelo, île de Sao Vincente - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-group-options="ui: 'outside'"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-5_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-5_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-5_small.jpg" class="gallery_img" alt="Bateaux dans le port de Mindelo">
                 </a>
             </div>
             <div class="gallery_item gallery_item--2">
                 <a href="../images/CapVert/201101_CAP_VERT-13.jpg" class="fresco" 
-                data-fresco-caption="Cap Vert 2011"
+                data-fresco-caption="Vue depuis Mindelo, île de Sao Vincente - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-13_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-13_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-13_small.jpg" class="gallery_img" alt="Bateaux au mouillage">
                 </a>
             </div>
             <div class="gallery_item gallery_item--3">
                 <a href="../images/CapVert/201101_CAP_VERT-17.jpg" class="fresco" 
-                data-fresco-caption="Cap Vert 2011"
+                data-fresco-caption="Vue depuis Mindelo, île de Sao Vincente - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-17_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-17_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-17_small.jpg" class="gallery_img" alt="Vue sur des iles embrumées">
                 </a>
             </div>
             <div class="gallery_item gallery_item--4">
                 <a href="../images/CapVert/201101_CAP_VERT-40.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Ile de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-40_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-40_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-40_small.jpg" class="gallery_img" alt="Vue sur les reliefs de Santo Antao">
                 </a>
             </div>
             <div class="gallery_item gallery_item--5">
                 <a href="../images/CapVert/201101_CAP_VERT-56.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Ile de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-56_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-56_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-56_small.jpg" class="gallery_img" alt="Vallée menant à la mer">
                 </a>
             </div>
             <div class="gallery_item gallery_item--6">
                 <a href="../images/CapVert/201101_CAP_VERT-75.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Ile de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-75_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-75_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-75_small.jpg" class="gallery_img" alt="Cultures en fond de vallée">
                 </a>
             </div>
             <div class="gallery_item gallery_item--7">
                 <a href="../images/CapVert/201101_CAP_VERT-99.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Ile de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-99_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-99_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-99_small.jpg" class="gallery_img" alt="Relief déchiqueté">
                 </a>
             </div>
             <div class="gallery_item gallery_item--8">
                 <a href="../images/CapVert/201101_CAP_VERT-107.jpg" class="fresco" 
-                data-fresco-caption="Enfants, Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Enfants, île de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-107_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-107_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-107_small.jpg" class="gallery_img" alt="Groupe d'enfants jouant avec des ballons de baudruche">
                 </a>
             </div>
             <div class="gallery_item gallery_item--9">
                 <a href="../images/CapVert/201101_CAP_VERT-129.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Ile de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-129_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-129_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-129_small.jpg" class="gallery_img" alt="Relief plongeant dans la mer">
                 </a>
             </div>
             <div class="gallery_item gallery_item--10">
                 <a href="../images/CapVert/201101_CAP_VERT-132.jpg" class="fresco" 
-                data-fresco-caption="Enfants, Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Enfants, île de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-132_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-132_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-132_small.jpg" class="gallery_img" alt="Deux enfants prenant la pose">
                 </a>
             </div>
             <div class="gallery_item gallery_item--11">
                 <a href="../images/CapVert/201101_CAP_VERT-148.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Reliefs, île de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-148_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-148_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-148_small.jpg" class="gallery_img" alt="Montagnes en premier, second et arrière-plans">
                 </a>
             </div>
             <div class="gallery_item gallery_item--12">
                 <a href="../images/CapVert/201101_CAP_VERT-153.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Ile de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-153_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-153_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-153_small.jpg" class="gallery_img" alt="Maison, montagne et mer">
                 </a>
             </div>
             <div class="gallery_item gallery_item--13">
                 <a href="../images/CapVert/201101_CAP_VERT-161.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Ile de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-161_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-161_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-161_small.jpg" class="gallery_img" alt="Reliefs montagneux et mer">
                 </a>
             </div>
             <div class="gallery_item gallery_item--14">
                 <a href="../images/CapVert/201101_CAP_VERT-163.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Ile de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-163_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-163_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-163_small.jpg" class="gallery_img" alt="Reliefs montagneux">
                 </a>
             </div>
             <div class="gallery_item gallery_item--15">
@@ -169,7 +174,7 @@
                 data-fresco-caption="Eglise, Ponto do Sol - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-171_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-171_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-171_small.jpg" class="gallery_img" alt="Eglise et palmiers">
                 </a>
             </div>
             <div class="gallery_item gallery_item--16">
@@ -177,7 +182,7 @@
                 data-fresco-caption="Port de Ponto do Sol - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-180_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-180_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-180_small.jpg" class="gallery_img" alt="Barques colorées et pêcheurs dans le port">
                 </a>
             </div>
             <div class="gallery_item gallery_item--17">
@@ -185,55 +190,55 @@
                 data-fresco-caption="Barques, Ponto do Sol - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-183_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-183_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-183_small.jpg" class="gallery_img" alt="Gros plan sur des barques colorées">
                 </a>
             </div>
             <div class="gallery_item gallery_item--18">
                 <a href="../images/CapVert/201101_CAP_VERT-190.jpg" class="fresco" 
-                data-fresco-caption="Coucher de soleil, Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Coucher de soleil, île de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-190_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-190_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-190_small.jpg" class="gallery_img" alt="Coucher de soleil sur la côte">
                 </a>
             </div>
             <div class="gallery_item gallery_item--19">
                 <a href="../images/CapVert/201101_CAP_VERT-192.jpg" class="fresco" 
-                data-fresco-caption="Coucher de soleil, Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Coucher de soleil, île de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-192_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-192_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-192_small.jpg" class="gallery_img" alt="Coucher de soleil sur la côte">
                 </a>
             </div>
             <div class="gallery_item gallery_item--20">
                 <a href="../images/CapVert/201101_CAP_VERT-211.jpg" class="fresco" 
-                data-fresco-caption="Enfant, Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Enfant, île de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-211_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-211_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-211_small.jpg" class="gallery_img" alt="Jeune enfant mangeant un yaourt">
                 </a>
             </div>
             <div class="gallery_item gallery_item--21">
                 <a href="../images/CapVert/201101_CAP_VERT-215.jpg" class="fresco" 
-                data-fresco-caption="Santo Antao - Cap Vert 2011"
+                data-fresco-caption="Ile de Santo Antao - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-215_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-215_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-215_small.jpg" class="gallery_img" alt="Vue sur un village côtier au pied des montagnes">
                 </a>
             </div>
             <div class="gallery_item gallery_item--22">
                 <a href="../images/CapVert/201101_CAP_VERT-256.jpg" class="fresco" 
-                data-fresco-caption="Sao Vincente - Cap Vert 2011"
+                data-fresco-caption="Ile de Sao Vincente - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-256_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-256_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-256_small.jpg" class="gallery_img" alt="Vue sur la côte">
                 </a>
             </div>
             <div class="gallery_item gallery_item--23">
                 <a href="../images/CapVert/201101_CAP_VERT-257.jpg" class="fresco" 
-                data-fresco-caption="Sao Vincente - Cap Vert 2011"
+                data-fresco-caption="Ile de Sao Vincente - Cap Vert 2011"
                 data-fresco-group="cap-vert"
                 data-fresco-options="thumbnail: '../images/CapVert/201101_CAP_VERT-257_small.jpg'">
-                    <img src="../images/CapVert/201101_CAP_VERT-257_small.jpg" class="gallery_img" alt="">
+                    <img src="../images/CapVert/201101_CAP_VERT-257_small.jpg" class="gallery_img" alt="Vue sur la côte et la roche volcanique">
                 </a>
             </div>
             
@@ -251,7 +256,7 @@
           Alozi | 2021
         </div>
         <div class="contact">
-            <a href="mailto:alozier45@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+            <a href="mailto:alozi.photo@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
         </div>
     </footer>
 
