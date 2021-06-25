@@ -7,16 +7,18 @@
 body {
     background: $color-bgd-light;
     color: $color-font-dark;
+    h1 {
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    a {
+        color: $color-font-dark;
+        text-decoration: none;
+    }
+    p {
+        line-height: 1.5;
+    }
 }
 
-h1 {
-    font-family: 'Julius Sans One', sans-serif;
-}
-
-a {
-    color: $color-font-dark;
-    text-decoration: none;
-}
 
 /* DARK MODE */
 .dark {

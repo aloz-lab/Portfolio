@@ -8,14 +8,15 @@ body {
   background: #fff;
   color: #000;
 }
-
-h1 {
+body h1 {
   font-family: "Julius Sans One", sans-serif;
 }
-
-a {
+body a {
   color: #000;
   text-decoration: none;
+}
+body p {
+  line-height: 1.5;
 }
 
 /* DARK MODE */
@@ -109,7 +110,7 @@ a {
 }
 .topbar .topbar_logo .logo1 {
   font-family: "Dr Sugiyama", cursive;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 54px;
 }
 .topbar .topbar_logo .logo2 {
@@ -151,7 +152,7 @@ a {
     text-align: center;
   }
   .topbar .topbar_logo .logo1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 46px;
   }
   .topbar .topbar_logo .logo2 {
@@ -188,6 +189,10 @@ a {
     cursor: pointer;
     outline: none;
   }
+  .topbar button:focus {
+    outline: none;
+    color: #fff;
+  }
 
   .topbar.responsive .topbar-nav {
     font-family: "Julius Sans One", sans-serif;
@@ -210,17 +215,14 @@ a {
   .topbar.responsive .topbar-nav a:hover {
     background: #c6ced2;
   }
-  .topbar.responsive .topbar-nav a:focus {
-    outline: none;
-    background-color: #c6ced2;
-  }
   .topbar.responsive .topbar-nav a.topbar-nav_active {
     color: #fff;
     background-color: #192734;
   }
-  .topbar.responsive button:focus {
+  .topbar.responsive .topbar-nav a:focus {
     outline: none;
-    color: #fff;
+    background-color: #c6ced2;
+    color: #000;
   }
 }
 /******* TABLET AND DESKTOP *******/
@@ -239,6 +241,7 @@ a {
   }
   .topbar .topbar-nav {
     text-align: center;
+    display: block !important;
   }
   .topbar .topbar-nav a {
     display: inline-block;
@@ -269,7 +272,7 @@ a {
   }
   .topbar .topbar_burger,
 .topbar .topbar_cross {
-    display: none;
+    display: none !important;
   }
   .topbar .topbar_logo {
     margin-left: 8%;
@@ -343,13 +346,14 @@ a {
   .portfolio .image a {
     color: #fff;
     transition: 0.4s ease;
-    /*&:focus {
-        color: $color-light-blue;
-        font-size: 20px;
-    }*/
   }
   .portfolio .image a:hover {
     color: #0ebac7;
+  }
+  .portfolio .image a:focus {
+    font-weight: 600;
+    color: #f1d326;
+    font-size: 1.2rem;
   }
   .portfolio .image .text {
     position: absolute;
@@ -396,7 +400,8 @@ a {
   }
   .portfolio .image a:focus {
     font-weight: 600;
-    font-size: 20px;
+    color: #f1d326;
+    font-size: 1.2rem;
   }
   .portfolio .image .text {
     position: absolute;
@@ -471,7 +476,7 @@ footer {
 footer .copyright {
   font-family: "Dr Sugiyama", cursive;
   color: #0096a1;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 footer .social-media {
   text-align: center;
