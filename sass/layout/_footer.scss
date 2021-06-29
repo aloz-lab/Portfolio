@@ -12,6 +12,9 @@ footer {
         font-family: 'Dr Sugiyama', cursive;
         color: $color-dark-blue;
         font-size: 1.75rem;
+        a {
+            color: $color-dark-blue;
+        }
     }
     .social-media {
         text-align: center;
