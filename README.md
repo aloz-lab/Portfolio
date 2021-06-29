@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[AloziPhoto Screenshot][product-screenshot]
+[![AloziPhoto Screenshot][product-screenshot]]
 
 Portfolio of my own pictures. Pictures taken during various travels.  
 
