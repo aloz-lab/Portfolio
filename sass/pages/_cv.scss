@@ -49,6 +49,10 @@ body {
     font-weight: bold;
 }
 
+.nav-link {
+    font-size: 1.2rem;
+}
+
 .navbar-toggler:hover {
     background-color: #00cfd5 !important;
 }
@@ -75,10 +79,6 @@ body {
 .masthead .masthead-subheading {
     font-size: 1.5rem;
 }
-
-/*.masthead .masthead-avatar {
-    width: 15rem;
-}*/
 
 .img-profile {
     width: 15rem;
@@ -126,6 +126,10 @@ body {
 /* ABOUT */
 #formation {
     padding-left: 0px;
+}
+
+h4 {
+    border-bottom: solid 2px #1f2d41;
 }
 
 #details {
