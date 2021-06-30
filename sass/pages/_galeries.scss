@@ -10,7 +10,6 @@
     .galeries-image {
         cursor: pointer;
         height: 250px;
-        //border: solid 2px black;
         @media screen and (max-width: 630px) {
             height: 150px;
         }
@@ -48,18 +47,11 @@
         }
         a:focus {
             outline: solid 4px black;
-            //outline: none;
             .text-container {
                 visibility: visible;
                 opacity: 1;
             }
         }
-        /*a:focus-visible {
-            outline: solid 4px black;
-        }*/
-        /*a::-moz-focus-inner {
-            border: 0;
-        }*/
     }
 
 

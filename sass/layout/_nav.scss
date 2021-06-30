@@ -196,9 +196,6 @@
             outline: none;
             border-bottom: solid 4px $color-bgd-light;
         }
-        /*.topbar-nav a::-moz-focus-inner {
-            border: 0;
-        }*/
         .topbar_burger,
         .topbar_cross {
             display: none !important;
@@ -207,12 +204,8 @@
             margin-left: 8%;
         }
         .toggle {
-            margin-right: 8%;
-            //input:focus {
-                //outline: solid 4px black;
-            //}   
-        }
-        
+            margin-right: 8%;  
+        }  
     }
 
     /* DARK MODE */
