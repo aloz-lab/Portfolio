@@ -18,4 +18,4 @@ Project Link: https://github.com/aloz-lab/Portfolio
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: images/CV/AloziPhoto.png
+[product-screenshot]: images/AloziPhoto.png
