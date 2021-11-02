@@ -1,6 +1,7 @@
 $(document).ready(function() {   
 
     /******* NAVBAR RESPONSIVE *******/
+
     $(".topbar_burger").click(function(e) {
         $("#topbar").addClass(" responsive");
         $(".topbar-nav").slideToggle("slow", function() {
@@ -22,42 +23,13 @@ $(document).ready(function() {
 
  
     /******** PORTFOLIO ********/
+    
     $(".image").click(function() {
         $(".image").removeClass("image_active");
         $(this).addClass("image_active");
     }); 
     
     /******** PORTFOLIO ACCESSIBILITY ********/
-
-    /*var image;
-    var imageSup;
-    var lien;
-    var lienSup;
-    $(".image").each(function(index) {
-        image = ".image-" + (index+1); 
-        imageSup = ".image-" + (index+2); 
-        lien = image + " a";
-        lienSup = imageSup + " a";
-        console.log(lien);
-        console.log(lienSup);
-        $(lien).blur(function() {           
-            $(document).keyup(function(touche){
-                var appui = touche.which || touche.keyCode;
-                if (appui == 9) { 
-                    $(image).removeClass("image_active");
-                    $(imageSup).addClass("image_active");
-                    if (index < 5) {
-                        $(lienSup).focus();
-                    } else {
-                        $(document).off("keyup"); 
-                    }    
-                }    
-            });   
-        });
-        image = ".image-";
-        imageSup = ".image-";
-    })*/
-
     $(".image-1 a").blur(function() {  
         $(document).keyup(function(touche){
             var appui = touche.which || touche.keyCode;
@@ -103,21 +75,11 @@ $(document).ready(function() {
     });
     
     $(".image-5 a").blur(function() { 
-        /*$(document).keyup(function(touche){
-            var appui = touche.which || touche.keyCode;
-            if (appui == 9) {
-                $(".image-5").removeClass("image_active");
-                $(".image-1").addClass("image_active");
-            }*/
         $(document).off("keyup");    
     });
 
 
     /******* DARK MODE *******/
-
-    /*$("#dark-mode").on("change", function() {
-        $("body").toggleClass("dark");
-    });*/
 
     let darkMode;
 
@@ -131,28 +93,16 @@ $(document).ready(function() {
 
     if (localStorage.getItem("darkMode") == "true") {
         $("body").addClass("dark");
-        //$(".toggle .label .ball").css("left", "34px");
-        //$(".toggle").addClass("night");
-    } else {
-        //$(".toggle .label .ball").css("left", "5px");
     }
 
     $("#dark-mode").on("click", function() {
         if (!$("body").hasClass("dark")) {
             $("body").addClass("dark");
-            //$('input[type="checkbox"]').attr("checked", "checked");
-            //$(".toggle .checkbox:checked + .label .ball").css("transform", "translateX(29px)");
-            //$(".toggle").addClass("night");
             localStorage.setItem("darkMode", "true");
         } else {
             $("body").removeClass("dark");
-            //$('input[type="checkbox"]').removeAttr("checked");
-            //$(".toggle .checkbox .label .ball").css("transform", "translateX(0px)");
-            //$(".toggle").removeClass("night");
             localStorage.setItem("darkMode", "null");
         }  
     });
-
-    //localStorage.removeItem("darkMode");
 
 });
