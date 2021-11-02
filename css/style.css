@@ -26,6 +26,7 @@ body p {
 .dark .portfolio-title, .dark .title {
   color: #fff;
 }
+
 .toggle {
   position: relative;
 }
@@ -72,9 +73,11 @@ body p {
   transform: translateX(0px);
   transition: transform 0.4s ease;
 }
+
 .container {
   position: relative;
 }
+
 .skiptocontent {
   position: absolute;
   top: -200px;
@@ -90,6 +93,7 @@ body p {
 .skiptocontent:focus {
   top: -85px;
 }
+
 .topbar {
   background: #192734;
   border-bottom: 1px solid #192734;
@@ -129,6 +133,7 @@ body p {
     top: 15px;
     left: 15vw;
   }
+
   .topbar {
     height: 68px;
     position: relative;
@@ -187,6 +192,7 @@ body p {
     outline: none;
     color: #fff;
   }
+
   .topbar.responsive .topbar-nav {
     font-family: "Julius Sans One", sans-serif;
     font-weight: bold;
@@ -218,7 +224,6 @@ body p {
     color: #000;
   }
 }
-
 /******* TABLET AND DESKTOP *******/
 @media only screen and (min-width: 630px) {
   .topbar {
@@ -364,7 +369,6 @@ body p {
     opacity: 1;
   }
 }
-
 /******* MOBILE *******/
 @media only screen and (max-width: 630px) {
   .portfolio {
@@ -430,9 +434,11 @@ body p {
 .dark .title {
   color: #fff;
 }
+
 .dark .gallery a:focus {
   outline: solid 4px white;
 }
+
 .gallery {
   display: grid;
   width: 90vw;
@@ -451,6 +457,7 @@ body p {
   height: 100%;
   object-fit: cover;
 }
+
 footer {
   position: relative;
   bottom: 0;
@@ -521,6 +528,7 @@ footer .contact i:hover {
 .dark footer {
   background-color: #323b40;
 }
+
 .galeries {
   display: grid;
   max-width: 800px;
